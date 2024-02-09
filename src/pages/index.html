@@ -28,7 +28,8 @@
 			</div>
 		</header>
 
-		<main class="gallery"></main>
+		<main class="gallery">
+		</main>
 	</div>
 
 	<div class="modal" id="modal-container">
@@ -104,8 +105,8 @@
 						<div class="order__field">
 							<h2 class="modal__title">Способ оплаты</h2>
 							<div class="order__buttons">
-								<button type="button" class="button button_alt">Онлайн</button>
-								<button type="button" class="button button_alt">При получении</button>
+								<button type="button" class="button button_alt online">Онлайн</button>
+								<button type="button" class="button button_alt offline">При получении</button>
 							</div>
 						</div>
 						<label class="order__field">
@@ -166,11 +167,11 @@
 	</template>
 
 	<template id="card-catalog">
-		<button class="gallery__item card">
-			<span class="card__category card__category_soft">софт-скил</span>
-			<h2 class="card__title">+1 час в сутках</h2>
+		<button class=" card gallery__item">
+			<span class="card__category card__category_soft"></span>
+			<h2 class="card__title"></h2>
 			<img class="card__image" src="<%=require('../images/Subtract.svg')%>" alt="" />
-			<span class="card__price">750 синапсов</span>
+			<span class="card__price"></span>
 		</button>
 	</template>
 
@@ -180,7 +181,7 @@
 			<div class="card__column">
 				<span class="card__category card__category_other">другое</span>
 				<h2 class="card__title">Бэкенд-антистресс</h2>
-				<p class="card__text">Если планируете решать задачи в тренажёре, берите два.</p>
+				<p class="card__description">Если планируете решать задачи в тренажёре, берите два.</p>
 				<div class="card__row">
 					<button class="button card__button">В корзину</button>
 					<span class="card__price">1000 синапсов</span>
@@ -215,8 +216,8 @@
 				<div class="order__field">
 					<h2 class="modal__title">Способ оплаты</h2>
 					<div class="order__buttons">
-						<button name="card" type="button" class="button button_alt">Онлайн</button>
-						<button name="cash" type="button" class="button button_alt">При получении</button>
+						<button name="card" type="button" class="button button_alt online">Онлайн</button>
+						<button name="cash" type="button" class="button button_alt offline">При получении</button>
 					</div>
 				</div>
 				<label class="order__field">
@@ -236,7 +237,7 @@
 			<div class="order">
 				<label class="order__field">
 					<span class="form__label modal__title">Email</span>
-					<input name="email" class="form__input" type="text" placeholder="Введите Email" />
+					<input name="email" class="form__input" type="email" placeholder="Введите Email" />
 				</label>
 				<label class="order__field">
 					<span class="form__label modal__title">Телефон</span>
