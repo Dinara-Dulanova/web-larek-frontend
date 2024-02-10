@@ -223,16 +223,6 @@ events.on('modal:open', () => {
 events.on('modal:close', () => {
     page.locked = false;
 });
-/*
-events.on('basket:open', () => {
-    modal.render({
-        content: createElement<HTMLElement>('div', {}, [
-            basket.render({
-                selected: 'closed'
-            }),
-        ])
-    });
-});*/
 
 
 events.on('basket:open', () => {
@@ -247,10 +237,6 @@ events.on('basket:open', () => {
 
 // Отправлена форма заказа (после отправки формы с контактами)
 events.on('orderContacts:submit', () => {
-    console.log('appData.order' + appData.order),
-    console.log('uspeh');
-    console.log(appData.getTotal()); 
-    console.log(appData.order.items); 
     appData.order.total = appData.getTotal();
     api.orderLots(appData.order)
         .then((result) => {
@@ -283,6 +269,5 @@ let products = api.getLotList()
         console.error(err);
     });
 
-console.log(products);
 
 

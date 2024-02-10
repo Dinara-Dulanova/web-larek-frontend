@@ -24,6 +24,11 @@ export class Card<T> extends Component<ICard<T>> {
             }
         }
     }
+ 
+    getPriceValue() {   //извлекаем 
+        const priceText = this._price.textContent;
+        return parseInt(priceText);
+    }
 
     set id(value: string) {
         this.container.dataset.id = value;
@@ -50,6 +55,10 @@ export class Card<T> extends Component<ICard<T>> {
     }
 
     set button(value: boolean) {
+        console.log(this.getPriceValue());
+        if (!this.getPriceValue()) {
+            this._button.setAttribute('disabled', 'disabled');
+        }
         if (value) {
             this.setText(this._button, 'Удалить');
         } else {
